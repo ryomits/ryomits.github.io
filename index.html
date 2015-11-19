@@ -5,19 +5,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="javascripts/jquery.yycountdown.min.js"></script>
-  <title>禁煙タイマー</title>
+  <title>禁煙終了まで</title>
 </head>
 <body>
-  <style>
-    #timer {
-      font-size: 3.0em;
-    }
-    .container {
-      width: auto;
-      max-width: 680px;
-      padding: 30px 15px;
-    }
-  </style>
+<style>
+#timer {
+  font-size: 3.0em;
+}
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 30px 15px;
+}
+</style>
   <div class="container text-center">
     <h3>禁煙終了まで</h3>
     <div id="timer"></div>
@@ -27,7 +27,8 @@
         endDateTime   : '2016/01/31 19:00:00',
         unit          : {d: '日', h: '時間', m: '分', s: '秒'},
         complete      : function(_this){
-          _this.find('.yycountdown-box').fadeOut();
+          _this.find('.yycountdown-box').remove();
+          $('h3').html('禁煙終了');
         }
     });
   </script>
