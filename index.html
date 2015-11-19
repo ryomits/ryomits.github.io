@@ -8,12 +8,27 @@
   <title>禁煙タイマー</title>
 </head>
 <body>
-  <div class="container">
-    <div id="a"></div>
+  <style>
+    #timer {
+      font-size: 3.0em;
+    }
+    .container {
+      width: auto;
+      max-width: 680px;
+      padding: 30px 15px;
+    }
+  </style>
+  <div class="container text-center">
+    <h3>禁煙終了まで</h3>
+    <div id="timer"></div>
   </div>
   <script>
-    $('#a').yycountdown({
-        endDateTime   : '2020/07/24 00:00:00'
+    $('#timer').yycountdown({
+        endDateTime   : '2016/01/31 19:00:00',
+        unit          : {d: '日', h: '時間', m: '分', s: '秒'},
+        complete      : function(_this){
+          _this.find('.yycountdown-box').fadeOut();
+        }
     });
   </script>
 </body>
