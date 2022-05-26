@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import { findArticles, type Article } from '../lib/api'
 
 type Props = {
@@ -10,7 +11,10 @@ const Index: NextPage<Props> = ({ articles }) => {
     <>
       {articles.map(article => (
         <ol key={article.name}>
-          {article.title}
+          {article.date}
+          <Link href={`/articles/${article.name}`}>
+            {article.title}
+          </Link>
         </ol>
       ))}
     </>
