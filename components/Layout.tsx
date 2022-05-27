@@ -1,6 +1,11 @@
+import { ReactElement } from "react"
 import Link from "next/link";
 
-export default function Layout({ children }) {
+type Props = {
+  children: ReactElement
+}
+
+export default function Layout({ children }: Props) {
   return (
     <>
       <header>
