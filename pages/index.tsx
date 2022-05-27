@@ -10,12 +10,14 @@ const Index: NextPage<Props> = ({ articles }) => {
   return (
     <>
       {articles.map(article => (
-        <ol key={article.name}>
-          {article.date}
-          <Link href={`/articles/${article.name}`}>
-            {article.title}
-          </Link>
-        </ol>
+        <ul key={article.name}>
+          <li>
+            <time>{article.date}</time>
+            <Link href={`/articles/${article.name}`}>
+              {article.title}
+            </Link>
+          </li>
+        </ul>
       ))}
     </>
   )
