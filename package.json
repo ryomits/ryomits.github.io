@@ -12,8 +12,8 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "zenn-content-css": "^0.1.110",
+    "zenn-markdown-html": "^0.1.110"
   },
   "devDependencies": {
     "@types/node": "17.0.35",

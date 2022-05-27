@@ -1,9 +1,8 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { remark } from "remark"
-import remarkHtml from "remark-html"
 import dayjs from "dayjs"
+import markdownToHtml from "zenn-markdown-html"
 
 const articleDirectory = path.join(process.cwd(), "articles")
 
@@ -54,13 +53,11 @@ export function findArticleByName(name: string): Article {
   }
 }
 
-export async function compileArticle(article: Article): Promise<CompiledArticle> {
-  const compiledResult = await remark()
-    .use(remarkHtml)
-    .process(article.content)
+export function compileArticle(article: Article): CompiledArticle {
+  const compiledResult = markdownToHtml(article.content)
 
   return {
     ...article,
-    body: compiledResult.toString()
+    body: compiledResult
   }
 }
