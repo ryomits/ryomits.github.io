@@ -13,6 +13,8 @@ type Props = {
 const showArticle: NextPage<Props> = ({ compiledArticle }) => {
   return (
     <>
+      <time>{compiledArticle.date}</time>
+      <h1>{compiledArticle.title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: compiledArticle.body }}
       ></div>

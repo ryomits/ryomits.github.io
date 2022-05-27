@@ -3,6 +3,7 @@ import path from "path"
 import matter from "gray-matter"
 import { remark } from "remark"
 import remarkHtml from "remark-html"
+import dayjs from "dayjs"
 
 const articleDirectory = path.join(process.cwd(), "articles")
 
@@ -46,7 +47,7 @@ export function findArticleByName(name: string): Article {
 
   return {
     name,
-    date: articleMatterData.date.toString(),
+    date: dayjs(articleMatterData.date).format('YYYY年MM月DD日'),
     title: articleMatterData.title,
     description: articleMatterData.description,
     content: articleMatter.content,
