@@ -1,5 +1,5 @@
 html {
-  line-height: 1.7;
+  line-height: 1;
   font-size: 16px;
 }
 
@@ -15,66 +15,6 @@ header, main {
 
 nav > a {
   font-weight: bold;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  margin: 1rem auto;
-}
-
-p {
-  margin-top: 1rem;
-}
-
-ol,
-ul {
-  margin-top: 0;
-  padding-left: 1rem;
-}
-
-code {
-  font-size: 0.9rem;
-  padding: 0.2rem 0.4rem;
-  padding: 0.1em 0.25em;
-  background-color: #e7edf3
-}
-
-pre {
-  margin: 2.5rem 0;
-  padding: 0.75rem;
-  line-height: 1.4;
-  background-color: #272822;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-pre > code {
-  background-color: transparent;
-  color: #f8f8f2;
-}
-
-blockquote {
-  margin-left: 0;
-  margin-right: 2rem;
-  padding: 0 0 0 1rem;
-  border-left: 0.25rem solid;
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-bottom: 2rem;
 }
 
 time {
