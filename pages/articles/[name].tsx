@@ -5,6 +5,7 @@ import {
   compileArticle,
   findArticles,
 } from "../../lib/api"
+import 'zenn-content-css'
 
 type Props = {
   compiledArticle: CompiledArticle
@@ -12,13 +13,13 @@ type Props = {
 
 const showArticle: NextPage<Props> = ({ compiledArticle }) => {
   return (
-    <>
+    <article>
       <time>{compiledArticle.date}</time>
-      <h1>{compiledArticle.title}</h1>
+      <h1 style={{'margin': 0, 'border': 0}}>{compiledArticle.title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: compiledArticle.body }}
       ></div>
-    </>
+    </article>
   )
 }
 
@@ -40,7 +41,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: {params: { name: string }}) {
   const article = findArticleByName(params.name);
-  const compiledArticle = await compileArticle(article)
+  const compiledArticle = compileArticle(article)
   return {
     props: {
       compiledArticle
