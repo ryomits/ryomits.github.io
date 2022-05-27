@@ -5,7 +5,6 @@ import {
   compileArticle,
   findArticles,
 } from "../../lib/api"
-import 'zenn-content-css'
 
 type Props = {
   compiledArticle: CompiledArticle
