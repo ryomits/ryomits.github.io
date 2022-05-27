@@ -14,7 +14,7 @@ const showArticle: NextPage<Props> = ({ compiledArticle }) => {
   return (
     <article>
       <time>{compiledArticle.date}</time>
-      <h1 style={{'margin': 0, 'border': 0}}>{compiledArticle.title}</h1>
+      <h1>{compiledArticle.title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: compiledArticle.body }}
       ></div>
