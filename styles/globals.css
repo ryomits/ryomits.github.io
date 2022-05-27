@@ -35,3 +35,12 @@ h1, h2 {
 h3, h4 {
   margin-top: 1.6rem !important;
 }
+
+nav > ul {
+  padding-left: 0 !important;
+}
+
+nav li {
+  list-style: none !important;
+  margin-top: 2rem !important;
+}

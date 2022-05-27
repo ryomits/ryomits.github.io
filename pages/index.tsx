@@ -8,18 +8,18 @@ type Props = {
 
 const Index: NextPage<Props> = ({ articles }) => {
   return (
-    <div>
-      {articles.map(article => (
-        <ul key={article.name}>
-          <li>
-            <time>{article.date}</time>
-            <Link href={`/articles/${article.name}`}>
-              {article.title}
-            </Link>
-          </li>
-        </ul>
-      ))}
-    </div>
+    <nav>
+      <ul>
+        {articles.map(article => (
+            <li key={article.name}>
+              <time>{article.date}</time>
+              <Link href={`/articles/${article.name}`}>
+                {article.title}
+              </Link>
+            </li>
+        ))}
+      </ul>
+    </nav>
   )
 }
 
