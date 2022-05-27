@@ -8,13 +8,13 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <>
+    <div className="znc">
       <header>
         <nav>
-          <Link href="/">ryomits.github.io</Link>
+          <Link href="/"><a>ryomits.github.io</a></Link>
         </nav>
       </header>
-      <main className="znc">{children}</main>
-    </>
+      <main>{children}</main>
+    </div>
   )
 }
