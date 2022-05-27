@@ -8,7 +8,7 @@ type Props = {
 
 const Index: NextPage<Props> = ({ articles }) => {
   return (
-    <>
+    <div>
       {articles.map(article => (
         <ul key={article.name}>
           <li>
@@ -19,7 +19,7 @@ const Index: NextPage<Props> = ({ articles }) => {
           </li>
         </ul>
       ))}
-    </>
+    </div>
   )
 }
 
