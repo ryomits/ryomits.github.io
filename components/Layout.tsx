@@ -1,20 +1,20 @@
-import { ReactElement } from "react"
+import { ReactElement } from "react";
 import Link from "next/link";
-import 'zenn-content-css'
+import "zenn-content-css";
 
 type Props = {
-  children: ReactElement
-}
+  children: ReactElement;
+};
 
 export default function Layout({ children }: Props) {
   return (
     <div className="znc">
       <header>
         <nav>
-          <Link href="/"><a>ryomits.github.io</a></Link>
+          <Link href="/">ryomits.github.io</Link>
         </nav>
       </header>
       <main>{children}</main>
     </div>
-  )
+  );
 }
