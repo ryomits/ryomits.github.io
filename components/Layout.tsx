@@ -7,7 +7,7 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <Box>
+    <Box sx={{ maxWidth: "50rem", margin: "0 auto" }}>
       <PageLayout>
         <PageLayout.Header>
           <Pagehead>
