@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import dayjs from "dayjs"
-import markdownToHtml from "zenn-markdown-html"
+import { marked } from "marked"
 
 const articleDirectory = path.join(process.cwd(), "articles")
 
@@ -54,7 +54,7 @@ export function findArticleByName(name: string): Article {
 }
 
 export function compileArticle(article: Article): CompiledArticle {
-  const compiledResult = markdownToHtml(article.content)
+  const compiledResult = marked.parse(article.content, { gfm: true })
 
   return {
     ...article,

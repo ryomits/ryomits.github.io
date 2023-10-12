@@ -1,4 +1,6 @@
 import { NextPage } from "next";
+import { Text, Heading } from "@primer/react"
+import { MarkdownViewer } from "@primer/react/drafts"
 import {
   findArticleByName,
   type CompiledArticle,
@@ -13,11 +15,11 @@ type Props = {
 const showArticle: NextPage<Props> = ({ compiledArticle }) => {
   return (
     <article>
-      <time>{compiledArticle.date}</time>
-      <h1>{compiledArticle.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{ __html: compiledArticle.body }}
-      ></div>
+      <Text as="time">{compiledArticle.date}</Text>
+      <Heading as="h1">{compiledArticle.title}</Heading>
+      <MarkdownViewer
+        dangerousRenderedHTML={{ __html: compiledArticle.body }}
+      />
     </article>
   )
 }
