@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
+import { Link, Text } from "@primer/react"
 import { findArticles, type Article } from '../lib/api'
 
 type Props = {
@@ -12,7 +12,7 @@ const Index: NextPage<Props> = ({ articles }) => {
       <ul>
         {articles.map(article => (
             <li key={article.name}>
-              <time>{article.date}</time>
+              <Text as="p">{article.date}</Text>
               <Link href={`/articles/${article.name}`}>
                 {article.title}
               </Link>

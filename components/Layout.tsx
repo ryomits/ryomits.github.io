@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
-import Link from "next/link";
-import "zenn-content-css";
+import { Pagehead, PageLayout, Box, Link } from "@primer/react"
 
 type Props = {
   children: ReactElement;
@@ -8,13 +7,17 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="znc">
-      <header>
-        <nav>
-          <Link href="/">ryomits.github.io</Link>
-        </nav>
-      </header>
-      <main>{children}</main>
-    </div>
+    <Box sx={{ backgroundColor: "#2b2d2e", minHeight: "100vh" }}>
+      <PageLayout>
+        <PageLayout.Header>
+          <Pagehead sx={{ marginBottom: 0 }}>
+            <Link href="/">ryomits.github.io</Link>
+          </Pagehead>
+        </PageLayout.Header>
+        <PageLayout.Content>
+          <main>{children}</main>
+        </PageLayout.Content>
+      </PageLayout>
+    </Box>
   );
 }

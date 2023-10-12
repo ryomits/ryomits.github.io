@@ -1,13 +1,18 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
+import { ThemeProvider, BaseStyles } from "@primer/react"
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider colorMode="dark">
+      <BaseStyles>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </BaseStyles>
+    </ThemeProvider>
   )
 }
 
-export default MyApp
+export default App
